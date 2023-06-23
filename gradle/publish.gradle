@@ -1,5 +1,4 @@
 apply plugin: 'com.gradle.plugin-publish'
-apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'org.ajoberstar.grgit'
 apply plugin: 'org.ajoberstar.github-pages'
 
@@ -10,14 +9,6 @@ ext {
 version = '0.4.1'
 String tag = "v$project.version"
 groovydoc.docTitle = 'Build Properties Plugin'
-
-publish {
-    userOrg = 'novoda'
-    groupId = 'com.novoda'
-    artifactId = 'gradle-build-properties-plugin'
-    publishVersion = project.version
-    website = websiteUrl
-}
 
 githubPages {
     commitMessage = "Deploy groovydoc for release $tag"
